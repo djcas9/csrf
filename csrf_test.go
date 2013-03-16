@@ -32,9 +32,8 @@ func TestToken(t *testing.T) {
 
 }
 
-// Test malformed
 func TestMalformed(t *testing.T) {
-	a := string(rand16())
+	a := string(Rand16())
 	if Valid(a, action, id) {
 		t.Errorf("Expected generated token to be invalid, malformed data")
 	}
