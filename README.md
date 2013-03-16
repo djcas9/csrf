@@ -1,7 +1,7 @@
 CSRF packege
 ====
 
-CSRF Token generation for Go web app.
+CSRF (XSRF) Token generation and validation for Go web app.
 
 CSRF token generation and validation for cross server communication.
 
