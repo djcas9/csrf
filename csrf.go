@@ -31,7 +31,7 @@ type Token struct {
 	Hmac      string //sha1 hmac
 }
 
-func rand16() []byte {
+func Rand16() []byte {
 	f, _ := os.Open("/dev/urandom")
 	defer f.Close()
 	b := make([]byte, 16)
