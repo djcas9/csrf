@@ -18,7 +18,9 @@ Usage:
   )
 
   //Init
-  csrf.Key = []byte("changme") // Secret hmac key
+  // csrf.Key = []byte("changme") // Secret hmac key
+  // OR gen key at startup
+  csrf.Key = csrf.Rand16()
   csrf.Timeout = 24 * time.Hour // 1d expiration
   // Generate
   actionid := string("POST /form")
