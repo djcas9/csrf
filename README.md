@@ -6,11 +6,12 @@ CSRF Token generation for Go web app.
 CSRF token generation and validation for cross server communication.
 
 Usage:
- 
+``` 
   go get  github.com/postfix/csrf
+```  
+---
 
-!go 
-
+```go
   import (
      "github.com/postfix/csrf"
      "time"   
@@ -27,3 +28,4 @@ Usage:
   if !csrf.Valid(csrftoken,actionid,sessionid) {
       fmt.Println("Error: csrf token not valid")
   }
+```
