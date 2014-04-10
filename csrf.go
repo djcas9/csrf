@@ -1,7 +1,5 @@
 // Package provides methods for generating and validating secure XSRF (CSRF) tokens.
 //	Copyright (C) 2013  Janis N Vizulis
-// Copyright 2012 The Gorilla Authors. All rights reserved.
-// license that can be found in the LICENSE file.
 
 
 package csrf
