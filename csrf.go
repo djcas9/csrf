@@ -50,7 +50,7 @@ func newToken(actionID string, id string) string {
 
 func (x *Token) tokenHmac() string {
 	h := hmac.New(sha1.New, Key)
-	fmt.Fprintf(h, "%s%s%d", x.ActionID, x.Id, x.IssueTime)
+	fmt.Fprintf(h, "%s:%s:%d", x.ActionID, x.Id, x.IssueTime)
 	tokBuf := bytes.NewBuffer(make([]byte, 0, sha1.Size))
 	fmt.Fprintf(tokBuf, "%s", h.Sum(nil))
 	return base64.URLEncoding.EncodeToString(tokBuf.Bytes())
