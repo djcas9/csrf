@@ -12,7 +12,7 @@ var (
 
 func TestToken(t *testing.T) {
 	Key = Rand16()
-	s := newToken(action, id)
+	s := NewToken(action, id)
 	if !Valid(s, action, id) {
 		t.Error("Expected token to be valid.")
 	}
@@ -24,7 +24,7 @@ func TestToken(t *testing.T) {
 	if Valid(s, action, id) {
 		t.Error("Expected token to be invalid diferen user ID")
 	}
-	d := newToken(action, id)
+	d := NewToken(action, id)
 	Key = Rand16()
 	if Valid(d, action, id) {
 		t.Error("Expected token to be invalid diferen hmac key")
