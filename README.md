@@ -25,7 +25,7 @@ Usage:
   // Generate
   actionid := string("POST /form")
   sessionid :=string(usersession)
-  csrftoken := csrf.newToken(actionid,sessionid)
+  csrftoken := csrf.NewToken(actionid,sessionid)
   //Validate
   if !csrf.Valid(csrftoken,actionid,sessionid) {
       fmt.Println("Error: csrf token not valid")
