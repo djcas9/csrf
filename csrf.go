@@ -37,7 +37,7 @@ func Rand16() []byte {
 	return b
 }
 
-func newToken(actionID string, id string) string {
+func NewToken(actionID string, id string) string {
 	x := new(Token)
 	x.ActionID = actionID
 	x.Id = id
